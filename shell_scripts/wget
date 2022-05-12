@@ -1,0 +1,16 @@
+#! /usr/bin/bash
+
+args="$@"
+
+site_mirror="https\:\/\/mirror\.ghproxy\.com\/"
+
+github_sites=("https\:\/\/github\.com" "https\:\/\/raw\.githubusercontent\.com")
+download_site=$args
+for github_site in ${github_sites[*]}; do
+	if [[ $args =~ $github_site ]]; then
+		download_site=$(echo $args | sed "s/$github_site/$site_mirror$github_site/")
+		break
+	fi
+done
+echo -e "\033[41;36m wget download from $download_site \033[0m"
+/usr/bin/wget $download_site
