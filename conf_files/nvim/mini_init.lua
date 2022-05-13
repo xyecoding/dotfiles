@@ -9,3 +9,11 @@ vim.cmd(
   au BufWinEnter * silent loadview
   ]]
 )
+
+-- vim.ui.select({ 'y', 'n' }, {
+--   prompt = "You have unsaved changes. Quit anyway? (y/n) ",
+-- }, function(input)
+--   if input == "y" then
+--     vim.cmd "q!"
+--   end
+-- end)
