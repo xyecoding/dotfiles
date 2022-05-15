@@ -4,8 +4,8 @@ dap_install.config("python", {})
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-    command = "autopep8",
-    -- command = "black",
+    -- command = "autopep8",
+    command = "black",
   },
 }
 
