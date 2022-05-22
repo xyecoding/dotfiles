@@ -4,10 +4,8 @@ vim.cmd [[
     autocmd BufRead * autocmd BufWinEnter * ++once normal! zx
   augroup end
 ]]
--- The vim script command should be write in [[]]
-lvim.autocommands.custom_groups = {
-  --   -- Return to last edit position when opening files (You want this!)
-  { "BufReadPost", "*", [[if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]] },
-  --   -- { "BufWinLeave", "*", "silent mkview" },
-  --   -- { "BufWinEnter", "*", "loadview" },
-}
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = { "*" },
+  command = [[if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]],
+})
