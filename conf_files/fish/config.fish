@@ -16,6 +16,7 @@ alias mvi ~/.config/lvim/mylvim/mvi
 alias vi lvim
 alias v lvim
 alias rm trash-put
+alias em "emacs -nw"
 # shopt -s direxpand
 set de /mnt/c/Users/12197/Desktop
 set do /mnt/c/Users/12197/Downloads
