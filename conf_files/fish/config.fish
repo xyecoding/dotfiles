@@ -37,6 +37,11 @@ alias vfc 'vi ~/dotfiles/conf_files/fish/config.fish'
 alias wda 'fish ~/myDiary/create_diary.fish'
 alias cda 'cd ~/myDiary'
 
+if test $(grep Microsoft /proc/version)
+  set -x http_proxy socks://127.0.0.1:10808
+  set -x https_proxy socks://127.0.0.1:10808
+end
+
 alias bk '~/dotfiles/shell_scripts/backup_files.fish'
 alias gp 'grep -n -H -R'
 
