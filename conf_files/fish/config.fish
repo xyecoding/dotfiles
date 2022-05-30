@@ -7,6 +7,8 @@ set -x WINEARCH "win32"
 set -x PATH ~/.cargo/bin $PATH
 set -x PATH ~/.fnm $PATH
 set -x PATH ~/.local/bin $PATH
+set -x PATH ~/.local/bin/bin $PATH
+set -x PATH ~/.local/bin/bin/statusbar $PATH
 set -x DISPLAY :0.0
 alias nusr "~/dotfiles/shell_scripts/create_new_usr.sh"
 fnm env --use-on-cd | source

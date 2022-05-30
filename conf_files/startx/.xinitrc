@@ -52,4 +52,5 @@ fcitx5 &
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 exec slstatus &
+pulseaudio --start &
 exec dwm
