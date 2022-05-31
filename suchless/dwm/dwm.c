@@ -1793,8 +1793,8 @@ void run(void) {
 }
 
 void runAutostart(void) {
-  system("cd ~/bin/dwm.script; ./blocking.sh");
-  system("cd ~/bin/dwm.script; ./init.sh &");
+  system("cd ~/.dwm; ./blocking.sh");
+  system("cd ~/.dwm; ./init.sh &");
 }
 
 void scan(void) {
