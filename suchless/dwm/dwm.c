@@ -271,6 +271,7 @@ static void resizemouse(const Arg *arg);
 static void resizerequest(XEvent *e);
 static void restack(Monitor *m);
 static void rotatestack(const Arg *arg);
+static void focuscur(const Arg *i);
 static void run(void);
 static void runAutostart(void);
 static void scan(void);
@@ -1106,6 +1107,12 @@ void focusmon(const Arg *arg) {
   focus(NULL);
 }
 
+void focuscur(const Arg *arg) {
+  focusstack(arg);
+  Arg new_arg;
+  new_arg.i = -arg->i;
+  rotatestack(&new_arg);
+}
 void focusstack(const Arg *arg) {
   Client *c = NULL, *i;
 
