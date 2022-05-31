@@ -48,6 +48,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+xset dpms 0 0 0
 fcitx5 &
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
