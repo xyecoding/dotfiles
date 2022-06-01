@@ -16,6 +16,7 @@ fnm env --use-on-cd | source
 fish_vi_key_bindings
 alias mvi ~/.config/lvim/mylvim/mvi
 alias vi lvim
+alias tobupt ~/dotfiles/conf_files/openssh/connect_bupt.sh
 alias mlt "sudo ~/dotfiles/shell_scripts/change_light_arch.sh"
 alias v lvim
 alias rm trash-put
