@@ -142,7 +142,7 @@ lvim.plugins = {
     "mbbill/undotree",
     config = function()
       vim.cmd(
-      [[
+        [[
       let g:undotree_WindowLayout = 2
       nnoremap <leader>ut :UndotreeToggle<CR><C-w>w<C-w>w
 ]]

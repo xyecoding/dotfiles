@@ -46,7 +46,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
-lvim.builtin.nvimtree.show_icons.git = 0
+-- lvim.builtin.nvimtree.show_icons.git = 0
 
 lvim.builtin.cmp.completion.keyword_length = 2
 lvim.builtin.telescope.defaults.layout_config.width = 0.95
