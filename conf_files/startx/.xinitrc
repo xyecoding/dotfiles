@@ -54,5 +54,6 @@ xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 goldendict &
 exec slstatus &
-pulseaudio --start &
+# pulseaudio --start &
 exec dwm
+
