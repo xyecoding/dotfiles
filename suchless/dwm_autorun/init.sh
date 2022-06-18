@@ -2,3 +2,5 @@
 chromium -incognito &
 st &
 birdtray &
+vmware &
+yesplaymusic &
