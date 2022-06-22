@@ -3,4 +3,4 @@ chromium -incognito &
 st &
 birdtray &
 vmware &
-yesplaymusic &
+netease-cloud-music &
