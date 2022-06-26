@@ -30,6 +30,7 @@ alias ctp 'cd ~/temp_try'
 alias cdh 'cd ~/dotfiles'
 alias cvh 'cd ~/.local/share/lunarvim/lvim/'
 alias cbg 'cd ~/myBlog'
+alias cbr 'cd ~/BooksReading'
 alias cpp 'cd ~/mypaper/Understanding'
 set -U fish_cursor_insert line
 set -U fish_cursor_default block
