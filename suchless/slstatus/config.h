@@ -72,7 +72,7 @@ static const struct arg args[] = {
     {run_command, " %s | ",
      "amixer sget Capture | awk -F \"[][]\" '/Left:/ { print $2 }' | grep -v "
      "'^$'"},
-    {disk_free, " %s | ", "/"},
+    {disk_free, " %s | ", "/"},
     {disk_free, " %s | ", "/home"},
     {run_command, " %s | ", "uname -r | awk -F \"-\" '{ print $1 }'"},
     {datetime, "%s", "%F %R %A"},
