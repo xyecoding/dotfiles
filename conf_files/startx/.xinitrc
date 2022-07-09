@@ -57,3 +57,7 @@ exec slstatus &
 pulseaudio --start &
 exec dwm
 
+amixer set Master unmute
+amixer set Master unmute
+amixer sset Headphone unmute
+
