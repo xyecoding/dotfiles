@@ -57,4 +57,3 @@ exec slstatus &
 pulseaudio --start &
 exec dwm
 
-
