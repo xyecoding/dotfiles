@@ -3,6 +3,6 @@ chromium -incognito &
 st &
 birdtray &
 vmware &
-netease-cloud-music &
+netease-cloud-music %U --no-sandbox &
 
 
