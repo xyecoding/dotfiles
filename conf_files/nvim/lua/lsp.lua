@@ -1,6 +1,6 @@
 -- ---configure a server manually. !!requires `:lvimcachereset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "texlab" })
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "texlab" })
 
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!requires `:lvimcachereset` to take effect!!

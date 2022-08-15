@@ -78,7 +78,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- generic lsp settings
 
 -- ---@usage disable automatic installation of servers
-lvim.lsp.automatic_servers_installation = true
+-- lvim.lsp.automatic_servers_installation = true
+-- lvim.lsp.installer.setup.automatic_installation = true
 
 -- lvim.builtin.treesitter.textobjects = {
 --   swap = {
