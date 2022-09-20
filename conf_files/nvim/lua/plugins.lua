@@ -157,10 +157,10 @@ lvim.plugins = {
       -- vim.g.vimtex_compiler_progname = 'nvr'
       vim.g.vimtex_view_general_options = [[--unique @pdf\#src:@tex:@line:@col]]
       -- vim.g.vimtex_quickfix_ignore_filters = [['Warning', 'warning', 'badness', 'Overfull']]
-      vim.g.vimtex_quickfix_enabled = 0
+      vim.g.vimtex_quickfix_enabled = 1
       vim.g.vimtex_syntax_enabled = 1
       -- vim.g.vimtex_quickfix_autojump = 1
-      -- vim.g.vimtex_quickfix_mode = 2
+      vim.g.vimtex_quickfix_mode = 0
       -- vim.g.vimtex_quickfix_autoclose_after_keystrokes = 1
       -- vim.g.vimtex_quickfix_open_on_warning = 1
       -- vim.g.vimtex_compiler_latexmk = [[{ 'build_dir' : '',  'callback' : 1,  'continuous' : 1,  'executable' : 'latexmk',  'hooks' : [],  'options' : [    '-verbose',    '-synctex=1',    '-interaction=nonstopmode',  ], }]]
