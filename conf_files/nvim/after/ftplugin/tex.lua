@@ -17,19 +17,19 @@ local opts_texlab = {
       forwardSearch = {
         args = {}
       },
-      latexFormatter = "texlab",
-      -- latexindent = {
-      --   modifyLineBreaks = true
-      -- }
+      latexFormatter = "latexindent",
+      latexindent = {
+        modifyLineBreaks = true
+      }
     }
   }
 } -- check the lspconfig documentation for a list of all possible options
 require("lvim.lsp.manager").setup("texlab", opts_texlab)
 
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  {
-    command = "latexindent",
-    args = { "-m" },
-  },
-}
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup {
+--   {
+--     command = "latexindent",
+--     args = { "-m" },
+--   },
+-- }
