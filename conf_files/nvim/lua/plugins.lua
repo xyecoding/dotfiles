@@ -8,12 +8,12 @@ lvim.plugins = {
   --     'nvim-treesitter/nvim-treesitter',
   --     'MunifTanjim/nui.nvim',
   --   } },
-  {
-    "lukas-reineke/indent-blankline.nvim", -- indent blankline
-    config = function()
-      require("conf.indent-blankline").setup()
-    end,
-  },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim", -- indent blankline
+  --   config = function()
+  --     require("conf.indent-blankline").setup()
+  --   end,
+  -- },
   -- {
   --   "nvim-treesitter/nvim-treesitter-textobjects",
   -- },
