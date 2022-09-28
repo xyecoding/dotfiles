@@ -42,6 +42,7 @@ alias nuwc '~/dotfiles/shell_scripts/no_use_curl_wget.fish'
 alias vvc 'vi ~/.config/lvim/config.lua'
 alias vfc 'vi ~/dotfiles/conf_files/fish/config.fish'
 alias wda 'fish ~/myDiary/create_diary.fish'
+alias wtp 'fish ~/myDiary/create_topic.fish'
 alias cda 'cd ~/myDiary'
 
 if test $(grep Microsoft /proc/version)
