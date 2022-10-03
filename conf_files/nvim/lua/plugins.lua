@@ -33,6 +33,9 @@ lvim.plugins = {
     end,
   },
   {
+    "rhysd/vim-grammarous",
+  },
+  {
     "rcarriga/nvim-dap-ui",
     config = function()
       require("conf.dap-ui").setup()
