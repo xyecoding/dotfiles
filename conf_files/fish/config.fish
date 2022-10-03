@@ -45,10 +45,10 @@ alias wda 'fish ~/myDiary/create_diary.fish'
 alias wtp 'fish ~/myDiary/create_topic.fish'
 alias cda 'cd ~/myDiary'
 
-# if test $(grep Microsoft /proc/version)
-#   set -x http_proxy socks5://127.0.0.1:10808
-#   set -x https_proxy socks5://127.0.0.1:10808
-# end
+if test $(grep Microsoft /proc/version)
+  set -x http_proxy socks5://127.0.0.1:10808
+  set -x https_proxy socks5://127.0.0.1:10808
+end
 
 alias bk '~/dotfiles/shell_scripts/backup_files.fish'
 alias gp 'grep -n -H -R'
