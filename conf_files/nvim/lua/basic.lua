@@ -6,6 +6,11 @@ lvim.format_on_save = true
 -- filetype plugin on
 -- filetype indent on
 -- ]]
+lvim.builtin.which_key.setup.plugins.registers = true
+lvim.builtin.which_key.setup.plugins.marks = true
+lvim.builtin.which_key.setup.plugins.presets.operators = true
+-- lvim.builtin.which_key.setup.plugins.presets.motions = true
+
 if vim.fn.has "wsl" == 1 then
   vim.g.clipboard = {
     copy = {
