@@ -23,7 +23,7 @@ if vim.fn.has "wsl" == 1 then
     },
   }
 end
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.spell = true
 vim.opt.cmdheight = 1
 vim.opt.clipboard = ""
