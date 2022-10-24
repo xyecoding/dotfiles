@@ -41,17 +41,17 @@ lvim.plugins = {
       require("conf.dap-ui").setup()
     end,
   },
-  {
-    "voldikss/vim-translator",
-    event = "CursorMoved",
-    config = function()
-      vim.cmd [[
-    let g:translator_target_lang = 'zh'
-    let g:translator_default_engines = ['youdao', 'bing']
-    nmap <silent> \t <Plug>TranslateW
-]]
-    end,
-  },
+  --   {
+  --     "voldikss/vim-translator",
+  --     event = "CursorMoved",
+  --     config = function()
+  --       vim.cmd [[
+  --     let g:translator_target_lang = 'zh'
+  --     let g:translator_default_engines = ['youdao', 'bing']
+  --     nmap <silent> \t <Plug>TranslateW
+  -- ]]
+  --     end,
+  --   },
   {
     "j-hui/fidget.nvim",
     config = function()
