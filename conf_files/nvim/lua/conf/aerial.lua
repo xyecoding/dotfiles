@@ -38,7 +38,7 @@ M.setup = function()
     -- Determines the default direction to open the aerial window. The 'prefer'
     -- options will open the window in the other direction *if* there is a
     -- different buffer in the way of the preferred direction
-    default_direction = "prefer_right",
+    -- default_direction = "prefer_right",
 
     -- Disable aerial on files with this many lines
     disable_max_lines = 10000,
@@ -143,9 +143,9 @@ M.setup = function()
     -- They can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
     -- min_width and max_width can be a list of mixed types.
     -- max_width = {40, 0.2} means "the lesser of 40 columns or 20% of total"
-    max_width = { 50 },
+    -- max_width = { 50 },
     width = nil,
-    min_width = 10,
+    -- min_width = 10,
 
     -- Set default symbol icons to use patched font icons (see https://www.nerdfonts.com/)
     -- "auto" will set it to true if nvim-web-devicons or lspkind-nvim is installed.
@@ -163,7 +163,7 @@ M.setup = function()
 
     -- Set to true to only open aerial at the far right/left of the editor
     -- Default behavior opens aerial relative to current window
-    placement_editor_edge = false,
+    -- placement_editor_edge = false,
 
     -- Run this command after jumping to a symbol (false will disable)
     post_jump_cmd = "normal! zz",
