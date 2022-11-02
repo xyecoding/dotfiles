@@ -54,6 +54,7 @@ alias bk '~/dotfiles/shell_scripts/backup_files.fish'
 alias gp 'grep -n -H -R'
 
 bind -M insert \cj 'accept-autosuggestion'
+bind -M insert \cu 'accept-autosuggestion'
 set -U FZF_COMPLETE 0
 set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # bind -M default cd  '__fzf_cd'
