@@ -155,10 +155,12 @@ lvim.plugins = {
   { "lervag/vimtex",
     -- opt = true,
     config = function()
-      vim.g.vimtex_view_general_viewer = 'qpdfview'
+      -- vim.g.vimtex_view_general_viewer = 'qpdfview'
+      -- vim.g.vimtex_view_general_options = [[--unique @pdf\#src:@tex:@line:@col]]
+      vim.g.vimtex_view_general_viewer = 'okular'
+      vim.g.vimtex_view_general_options = [[--unique file:@pdf\#src:@line@tex]]
       -- vim.g.tex_comment_nospell = 1
       -- vim.g.vimtex_compiler_progname = 'nvr'
-      vim.g.vimtex_view_general_options = [[--unique @pdf\#src:@tex:@line:@col]]
       -- vim.g.vimtex_quickfix_ignore_filters = [['Warning', 'warning', 'badness', 'Overfull']]
       vim.g.vimtex_quickfix_enabled = 1
       vim.g.vimtex_syntax_enabled = 1
