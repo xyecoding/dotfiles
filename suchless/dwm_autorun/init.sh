@@ -2,7 +2,7 @@
 chromium -incognito &
 st &
 birdtray &
-# vmware &
+vmware &
 # netease-cloud-music %U --no-sandbox &
 
 
