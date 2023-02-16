@@ -155,6 +155,7 @@ lvim.plugins = {
   { "lervag/vimtex",
     -- opt = true,
     config = function()
+      vim.cmd("call vimtex#init()")
       -- vim.g.vimtex_view_general_viewer = 'qpdfview'
       -- vim.g.vimtex_view_general_options = [[--unique @pdf\#src:@tex:@line:@col]]
       vim.g.vimtex_view_general_viewer = 'okular'
@@ -181,7 +182,7 @@ lvim.plugins = {
   -- },
   {
     "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
+    build = "cd app && npm install",
     ft = "markdown",
     config = function()
       -- local root_dir = os.getenv("HOME")

@@ -1,6 +1,6 @@
 set -x PATH ~/go/bin $PATH
 set -x PATH /usr/local/luarocks/bin $PATH
-set -x PATH /usr/local/texlive/2021/bin/x86_64-linux $PATH
+# set -x PATH /usr/local/texlive/2021/bin/x86_64-linux $PATH
 
 set -x  LC_ALL "en_US.UTF-8"
 set -x WINEARCH "win32"
@@ -11,7 +11,6 @@ set -x PATH ~/.local/bin/bin $PATH
 set -x PATH ~/.local/bin/bin/statusbar $PATH
 
 set -x PATH /usr/local/texlive/2022/bin/x86_64-linux/ $PATH
-set -x DISPLAY :0.0
 alias nusr "~/dotfiles/shell_scripts/create_new_usr.sh"
 fnm env --use-on-cd | source
 
@@ -24,13 +23,12 @@ alias v lvim
 alias rm trash-put
 alias em "emacs -nw"
 # shopt -s direxpand
-set de /mnt/c/Users/12197/Desktop
-set do /mnt/c/Users/12197/Downloads
+set de /mnt/c/Users/yexiang//Desktop
+set do /mnt/c/Users/yexiang//Downloads
 alias ctp 'cd ~/temp_try'
 alias cdh 'cd ~/dotfiles'
 alias cvh 'cd ~/.local/share/lunarvim/lvim/'
 alias cbg 'cd ~/myBlog'
-alias cbr 'cd ~/BooksReading'
 alias cpp 'cd ~/mypaper'
 set -U fish_cursor_insert line
 set -U fish_cursor_default block
@@ -45,9 +43,12 @@ alias wda 'fish ~/myDiary/create_diary.fish'
 alias wtp 'fish ~/myDiary/create_topic.fish'
 alias cda 'cd ~/myDiary'
 
-if test $(grep Microsoft /proc/version)
-  set -x http_proxy socks5://127.0.0.1:10808
-  set -x https_proxy socks5://127.0.0.1:10808
+if test (grep microsoft /proc/version)
+ # set -x http_proxy socks5://127.0.0.1:10808
+ # set -x https_proxy socks5://127.0.0.1:10808
+    set -x http_proxy socks5://172.23.128.1:10808
+    set -x https_proxy socks5://172.23.128.1:10808
+    set -x DISPLAY 172.23.128.1:0.0
 end
 
 alias bk '~/dotfiles/shell_scripts/backup_files.fish'
