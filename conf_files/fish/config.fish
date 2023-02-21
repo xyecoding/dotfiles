@@ -46,9 +46,10 @@ alias cda 'cd ~/myDiary'
 if test (grep microsoft /proc/version)
  # set -x http_proxy socks5://127.0.0.1:10808
  # set -x https_proxy socks5://127.0.0.1:10808
-    set -x http_proxy socks5://172.23.128.1:10808
-    set -x https_proxy socks5://172.23.128.1:10808
-    set -x DISPLAY 172.23.128.1:0.0
+    set ip (cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+    set -x http_proxy socks5://$ip:10808
+    set -x https_proxy socks5://$ip:10808
+    set -x DISPLAY $ip:0.0
 end
 
 alias bk '~/dotfiles/shell_scripts/backup_files.fish'
