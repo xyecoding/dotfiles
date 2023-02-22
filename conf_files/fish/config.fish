@@ -40,6 +40,7 @@ alias vfc 'vi ~/dotfiles/conf_files/fish/config.fish'
 alias wda 'fish ~/myDiary/create_diary.fish'
 alias wtp 'fish ~/myDiary/create_topic.fish'
 alias cda 'cd ~/myDiary'
+alias am 'amixer set Speaker unmute; amixer set Master unmute; amixer set Headphone unmute'
 
 if test (grep microsoft /proc/version)
  # set -x http_proxy socks5://127.0.0.1:10808
