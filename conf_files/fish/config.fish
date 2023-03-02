@@ -30,7 +30,8 @@ alias cbg 'cd ~/myBlog'
 alias cpp 'cd ~/mypaper'
 set -U fish_cursor_insert line
 set -U fish_cursor_default block
-
+alias to1zjf 'sshpass -p SPGhaha12315 ssh -p 666 zhaojiafeng@10.112.36.190 '
+alias to3zjf 'sshpass -p SPGhaha12315 ssh -p 666 zhaojiafeng@10.112.218.126'
 
 alias uwc '~/dotfiles/shell_scripts/use_curl_wget.fish'
 alias nuwc '~/dotfiles/shell_scripts/no_use_curl_wget.fish'
