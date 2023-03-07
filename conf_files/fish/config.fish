@@ -66,6 +66,7 @@ set -l host_inf \
   host3 "10.112.218.126 666" 
 
 
+# the key must be host name + "_" + user name
 set -l user_inf \
   host1_zjf "zhaojiafeng SPGhaha12315" \
   host2_lfn "lfn lab223@b49OK"\
@@ -74,6 +75,7 @@ set -l user_inf \
 function cpfrom
   sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6]
 end
+
 function cpto
   sshpass -p $argv[1] scp -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5]
 end
