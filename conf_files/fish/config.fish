@@ -30,12 +30,65 @@ alias cbg 'cd ~/myBlog'
 alias cpp 'cd ~/mypaper'
 set -U fish_cursor_insert line
 set -U fish_cursor_default block
-alias to1zjf 'sshpass -p SPGhaha12315 ssh -p 666 zhaojiafeng@10.112.36.190 '
-alias to3zjf 'sshpass -p SPGhaha12315 ssh -p 666 zhaojiafeng@10.112.218.126'
+
+function dict_keys -d "Print keys from a key/value paired list"
+    for idx in (seq 1 2 (count $argv))
+        echo $argv[$idx]
+    end
+end
+
+function dict_values -d "Print values from a key/value paired list"
+    for idx in (seq 2 2 (count $argv))
+        echo $argv[$idx]
+    end
+end
+
+function dict_get -a key -d "Get the value associated with a key in a k/v paired list"
+    test (count $argv) -gt 2 || return 1
+    set -l keyseq (seq 2 2 (count $argv))
+    # we can't simply use `contains` because it won't distinguish keys from values
+    for idx in $keyseq
+        if test $key = $argv[$idx]
+            echo $argv[(math $idx + 1)]
+            return
+        end
+    end
+    return 1
+end
+
+function ssh_connect
+  sshpass -p $argv[1] ssh -p $argv[2] $argv[3]@$argv[4]
+end 
+
+set -l host_inf \
+  host1 "10.112.36.190  666" \
+  host2 "10.112.119.117 666" \
+  host3 "10.112.218.126 666" 
+
+
+set -l user_inf \
+  host1_zjf "zhaojiafeng SPGhaha12315" \
+  host2_lfn "lfn lab223@b49OK"\
+  host3_zjf "zhaojiafeng SPGhaha12315" \
+
+function cpfrom
+  sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6]
+end
+function cpto
+  sshpass -p $argv[1] scp -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5]
+end
+
+for user_name in (dict_keys $user_inf)
+  set -l temp_host (echo $user_name | awk -F "_" '{print $1}')
+  set -l temp_host (echo (dict_get $temp_host $host_inf) | awk '{print $1; print $2}')
+  set -l user (echo (dict_get $user_name $user_inf ) | awk '{print $1; print $2}')
+  alias to$user_name "ssh_connect $user[2] $temp_host[2] $user[1] $temp_host[1]"
+  alias cpfrom$user_name  "cpfrom $user[2] $temp_host[2] $user[1] $temp_host[1]"
+  alias cpto$user_name  "cpto $user[2] $temp_host[2] $user[1] $temp_host[1]"
+end
 
 alias uwc '~/dotfiles/shell_scripts/use_curl_wget.fish'
 alias nuwc '~/dotfiles/shell_scripts/no_use_curl_wget.fish'
-
 alias vvc 'vi ~/.config/lvim/config.lua'
 alias vfc 'vi ~/dotfiles/conf_files/fish/config.fish'
 alias wda 'fish ~/myDiary/create_diary.fish'
@@ -48,8 +101,7 @@ if test (grep microsoft /proc/version)
  # set -x https_proxy socks5://127.0.0.1:10808
     set de /mnt/c/Users/yexiang//Desktop
     set do /mnt/c/Users/yexiang//Downloads
-    set ip (cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
-    set -x http_proxy socks5://$ip:10808
+
     set -x https_proxy socks5://$ip:10808
     set -x DISPLAY $ip:0.0
 end
