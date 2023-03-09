@@ -57,4 +57,5 @@ goldendict &
 exec slstatus &
 pulseaudio --start &
 exec dwm
+unclutter -idle 1 -jitter 2 -root &
 
