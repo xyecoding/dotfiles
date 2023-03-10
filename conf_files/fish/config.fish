@@ -104,7 +104,8 @@ if test (grep microsoft /proc/version)
  # set -x https_proxy socks5://127.0.0.1:10808
     set de /mnt/c/Users/yexiang//Desktop
     set do /mnt/c/Users/yexiang//Downloads
-
+    set ip (cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+    set -x http_proxy socks5://$ip:10808
     set -x https_proxy socks5://$ip:10808
     set -x DISPLAY $ip:0.0
 end
