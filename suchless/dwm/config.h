@@ -98,12 +98,12 @@ static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"st", NULL};
-static const char *volup[] = {"/home/eric/dotfiles/shell_scripts/volume_up",
+static const char *volup[] = {"/home/Eric/dotfiles/shell_scripts/volume_up",
                               NULL};
-static const char *voldown[] = {"/home/eric/dotfiles/shell_scripts/volume_down",
+static const char *voldown[] = {"/home/Eric/dotfiles/shell_scripts/volume_down",
                                 NULL};
 static const char *voltoggle[] = {
-    "/home/eric/dotfiles/shell_scripts/volume_toggle", NULL};
+    "/home/Eric/dotfiles/shell_scripts/volume_toggle", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
                                       "-g", "120x34", NULL};

@@ -1,1 +1,1 @@
-sudo yay -S php-fpm  
+yay -S php-fpm  
