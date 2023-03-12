@@ -57,6 +57,10 @@ function dict_get -a key -d "Get the value associated with a key in a k/v paired
     return 1
 end
 
+if test $TERM = "st-256color"
+    tmux
+end
+
 function ssh_connect
   sshpass -p $argv[1] ssh -p $argv[2] $argv[3]@$argv[4]
 end 

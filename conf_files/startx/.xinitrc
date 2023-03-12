@@ -48,13 +48,18 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# twm &
+# xclock -geometry 50x50-1+1 &
+# xterm -geometry 80x50+494+51 &
+# xterm -geometry 80x20+494-0 &
+
 xset dpms 0 0 0
 fcitx5 &
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 # xrandr --output HDMI-1-1 --auto --right-of eDP-1-1
 goldendict &
-exec slstatus &
+slstatus &
 pulseaudio --start &
-exec dwm
-
+exec dwm 
+#xterm -geometry 80x66+0+0 -name login

@@ -2,6 +2,7 @@
 #sudo apt update
 #sudo apt install -y fish
 yay -S alsa-utils
+yay -S neofetch
 yay -S fish cmake
 chsh -s /usr/bin/fish
 fish
