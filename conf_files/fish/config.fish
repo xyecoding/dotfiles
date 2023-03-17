@@ -74,6 +74,7 @@ set -l host_inf \
 # the key must be host name + "_" + user name
 set -l user_inf \
   host1_zjf "zhaojiafeng SPGhaha12315" \
+  host1_yx "yexiang go4light!" \
   host2_lfn "lfn lab223@b49OK"\
   host3_zjf "zhaojiafeng SPGhaha12315" \
 
