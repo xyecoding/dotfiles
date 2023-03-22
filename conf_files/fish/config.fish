@@ -77,6 +77,7 @@ set -l user_inf \
   host1_yx "yexiang go4light!" \
   host2_lfn "lfn lab223@b49OK"\
   host3_zjf "zhaojiafeng SPGhaha12315" \
+  host3_yx "yexiang go4light!"\
 
 function cpfrom
   sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6]
