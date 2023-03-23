@@ -114,6 +114,13 @@ if test (grep microsoft /proc/version)
     set -x http_proxy socks5://$ip:10808
     set -x https_proxy socks5://$ip:10808
     set -x DISPLAY $ip:0.0
+else
+# Start X at login
+    if status --is-login
+        if test -z "$DISPLAY" -a $XDG_VTNR = 1
+            exec startx -- -keeptty
+        end
+    end
 end
 
 alias bk '~/dotfiles/shell_scripts/backup_files.fish'
@@ -127,9 +134,3 @@ set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # bind -M insert \ek 'set fish_bind_mode default'
 # set -gx Z_SCRIPT_PATH ~/z/z.sh
 set -gx EDITOR vi
-# Start X at login
-if status --is-login
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
-        exec startx -- -keeptty
-    end
-end
