@@ -25,6 +25,7 @@ alias em "emacs -nw"
 # shopt -s direxpand
 alias ctp 'cd ~/temp_try'
 alias cdh 'cd ~/dotfiles'
+alias cdd 'cd ~/Downloads'
 alias cvh 'cd ~/.local/share/lunarvim/lvim/'
 alias cbg 'cd ~/myBlog'
 alias gd   'goldendict'
