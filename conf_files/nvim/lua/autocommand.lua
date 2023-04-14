@@ -3,6 +3,11 @@ vim.cmd [[
     autocmd!
     autocmd BufRead * autocmd BufWinEnter * ++once normal! zx
   augroup end
+
+  " augroup vimtex_group
+  "   autocmd!
+  "   autocmd FileType tex call vimtex#init()
+  " augroup end
 ]]
 
 vim.api.nvim_create_autocmd("BufReadPost", {
