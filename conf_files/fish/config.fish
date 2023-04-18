@@ -69,7 +69,8 @@ end
 set -l host_inf \
   host1 "10.112.36.190  666" \
   host2 "10.112.119.117 666" \
-  host3 "10.112.218.126 666" 
+  host3 "10.112.218.126 666" \
+  host3090 "10.112.75.66 22"\
 
 
 # the key must be host name + "_" + user name
@@ -79,6 +80,7 @@ set -l user_inf \
   host2_lfn "lfn lab223@b49OK"\
   host3_zjf "zhaojiafeng SPGhaha12315" \
   host3_yx "yexiang go4light!"\
+  host3090_zjf "zjf SPGhaha12315"\
 
 function cpfrom
   sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6]
