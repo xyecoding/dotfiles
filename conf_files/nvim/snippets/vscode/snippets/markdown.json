@@ -2,7 +2,7 @@
   "date": {
     "prefix": "date",
     "body": [
-      "<font color=magenta>[${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}]</font>"
+      "<font color=magenta>[${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}]</font> ~ <font color=red>${CURRENT_DAY_NAME}</font>"
     ],
     "description": "date"
   },
