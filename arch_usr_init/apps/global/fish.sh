@@ -6,4 +6,5 @@ yay -S neofetch
 yay -S fish cmake
 chsh -s /usr/bin/fish
 fish
+yay -S joplin-desktop
 # with git
