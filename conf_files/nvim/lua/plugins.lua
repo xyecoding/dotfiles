@@ -155,8 +155,8 @@ lvim.plugins = {
   {
     "lervag/vimtex",
     -- opt = true,
-    config = function()
-      vim.cmd("call vimtex#init()")
+    init = function()
+      -- vim.cmd("call vimtex#init()")
       -- vim.g.vimtex_view_general_viewer = 'qpdfview'
       -- vim.g.vimtex_view_general_options = [[--unique @pdf\#src:@tex:@line:@col]]
       vim.g.vimtex_view_general_viewer = 'okular'
@@ -173,7 +173,7 @@ lvim.plugins = {
       -- vim.g.vimtex_compiler_latexmk = [[{ 'build_dir' : '',  'callback' : 1,  'continuous' : 1,  'executable' : 'latexmk',  'hooks' : [],  'options' : [    '-verbose',    '-synctex=1',    '-interaction=nonstopmode',  ], }]]
       -- vim.g.vimtex_quickfix_method = "pplattex"
     end,
-    ft = 'tex'
+    -- ft = 'tex'
   },
   -- {
   --   "ellisonleao/glow.nvim.git",
