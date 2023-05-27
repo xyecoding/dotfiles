@@ -64,7 +64,7 @@ if test $TERM = "st-256color"
 end
 
 function ssh_connect
-  sshpass -p $argv[1] ssh -p $argv[2] $argv[3]@$argv[4]
+  sshpass -p $argv[1] ssh -p $argv[2] $argv[3]@$argv[4] -o StrictHostKeyChecking=no
 end 
 
 set -l host_inf \
@@ -84,11 +84,11 @@ set -l user_inf \
   host3090_zjf "zjf SPGhaha12315"\
 
 function cpfrom
-  sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6]
+  sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] -o StrictHostKeyChecking=no
 end
 
 function cpto
-  sshpass -p $argv[1] scp -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5]
+  sshpass -p $argv[1] scp -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5] -o StrictHostKeyChecking=no
 end
 
 for user_name in (dict_keys $user_inf)
