@@ -84,11 +84,11 @@ set -l user_inf \
   host3090_zjf "zjf SPGhaha12315"\
 
 function cpfrom
-  sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] -o StrictHostKeyChecking=no
+  sshpass -p $argv[1] scp -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] 
 end
 
 function cpto
-  sshpass -p $argv[1] scp -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5] -o StrictHostKeyChecking=no
+  sshpass -p $argv[1] scp -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5] 
 end
 
 for user_name in (dict_keys $user_inf)
