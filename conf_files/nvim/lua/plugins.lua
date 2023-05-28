@@ -68,13 +68,13 @@ lvim.plugins = {
   --   --   require("conf.nvim-spectre").setup()
   --   -- end,
   -- },
-  {
-    "andymass/vim-matchup",
-    event = "CursorMoved",
-    config = function()
-      vim.g.matchup_matchparen_offscreen = { method = "popup" }
-    end,
-  },
+  -- {
+  --   "andymass/vim-matchup",
+  --   event = "CursorMoved",
+  --   config = function()
+  --     vim.g.matchup_matchparen_offscreen = { method = "popup" }
+  --   end,
+  -- },
   {
     "romgrk/nvim-treesitter-context",
     config = function()
