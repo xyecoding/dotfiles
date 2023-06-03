@@ -96,7 +96,7 @@ function cpfrom
   echo $argv[5]
   echo $argv[6]
   # sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] 
-  sshpass -p $argv[1] rsync --progress -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[3]@$argv[4]:$argv[5] $argv[6]
+  sshpass -p $argv[1] rsync --info=progress2 -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[3]@$argv[4]:$argv[5] $argv[6]
 end
 
 function cpto
@@ -104,7 +104,7 @@ function cpto
   set -l argv[6] (remove_dir_end $argv[6])
   echo $argv[5]
   echo $argv[6]
-  sshpass -p $argv[1] rsync --progress  -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[6] $argv[3]@$argv[4]:$argv[5] 
+  sshpass -p $argv[1] rsync --info=progress2  -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[6] $argv[3]@$argv[4]:$argv[5] 
   # sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5] 
 end
 
