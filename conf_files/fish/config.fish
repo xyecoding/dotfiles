@@ -85,14 +85,14 @@ set -l user_inf \
 
 function remove_dir_end
   if test (string sub -s -1 $argv[1] = /)
-    set argv[1] (string sub -e -1 $argv[1])
+    set -l argv[1] (string sub -e -1 $argv[1])
   end 
   echo $argv[1]
 end
 
 function cpfrom
-  set argv[5] (remove_dir_end $argv[5])
-  set argv[6] (remove_dir_end $argv[6])
+  set -l argv[5] (remove_dir_end $argv[5])
+  set -l argv[6] (remove_dir_end $argv[6])
   echo $argv[5]
   echo $argv[6]
   # sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] 
@@ -100,8 +100,8 @@ function cpfrom
 end
 
 function cpto
-  set argv[5] (remove_dir_end $argv[5])
-  set argv[6] (remove_dir_end $argv[6])
+  set -l argv[5] (remove_dir_end $argv[5])
+  set -l argv[6] (remove_dir_end $argv[6])
   echo $argv[5]
   echo $argv[6]
   sshpass -p $argv[1] rsync --progress  -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[6] $argv[3]@$argv[4]:$argv[5] 
