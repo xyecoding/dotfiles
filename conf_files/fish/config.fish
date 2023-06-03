@@ -83,12 +83,29 @@ set -l user_inf \
   host3_yx "yexiang go4light!"\
   host3090_zjf "zjf SPGhaha12315"\
 
+function remove_dir_end
+  if test (string sub -s -1 $argv[1] = /)
+    set argv[1] (string sub -e -1 $argv[1])
+  end 
+  echo $argv[1]
+end
+
 function cpfrom
-  sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] 
+  set argv[5] (remove_dir_end $argv[5])
+  set argv[6] (remove_dir_end $argv[6])
+  echo $argv[5]
+  echo $argv[6]
+  # sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[3]@$argv[4]:$argv[5] $argv[6] 
+  sshpass -p $argv[1] rsync --progress -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[3]@$argv[4]:$argv[5] $argv[6]
 end
 
 function cpto
-  sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5] 
+  set argv[5] (remove_dir_end $argv[5])
+  set argv[6] (remove_dir_end $argv[6])
+  echo $argv[5]
+  echo $argv[6]
+  sshpass -p $argv[1] rsync --progress  -av -e "ssh -p $argv[2] -o StrictHostKeyChecking=no" $argv[6] $argv[3]@$argv[4]:$argv[5] 
+  # sshpass -p $argv[1] scp -o StrictHostKeyChecking=no -r -P $argv[2] $argv[6] $argv[3]@$argv[4]:$argv[5] 
 end
 
 for user_name in (dict_keys $user_inf)
