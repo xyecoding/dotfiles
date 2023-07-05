@@ -82,6 +82,7 @@ set -l user_inf \
   host3_zjf "zhaojiafeng SPGhaha12315" \
   host3_yx "yexiang go4light!"\
   host3090_zjf "zjf SPGhaha12315"\
+  host3090_lbh "lbh buptb4lab223"\
 
 function remove_dir_end
   if test (string sub -s -1 $argv[1] = /)
