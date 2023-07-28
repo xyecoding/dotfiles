@@ -75,7 +75,7 @@ static const struct arg args[] = {
     {disk_free, " %s | ", "/"},
     {disk_free, " %s | ", "/home"},
     {run_command, " %s | ", "uname -r | awk -F \"-\" '{ print $1 }'"},
-    {battery_perc, "󰁿 %s%%", "BAT0"},
-    {battery_state, "%s | ", "BAT0"},
+    {battery_perc, "󰁿 %s%%", "BAT1"},
+    {battery_state, "%s | ", "BAT1"},
     {datetime, "%s", "%F %A %R"},
 };
