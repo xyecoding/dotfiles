@@ -6,7 +6,7 @@ sudo pacman -S fcitx5-pinyin-zhwiki #中文维基百科词库
 sudo pacman -S fcitx5-material-color #主题
 yay -S ripgrep fzf
 
-cat >> /etc/environment << 'EOF'
+sudo cat >> /etc/environment << 'EOF'
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
