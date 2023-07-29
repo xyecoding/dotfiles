@@ -54,6 +54,7 @@ lvim.plugins = {
   --   },
   {
     "j-hui/fidget.nvim",
+    branch = 'legacy',
     config = function()
       require("conf.fidget").setup()
     end,
