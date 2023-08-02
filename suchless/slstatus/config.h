@@ -65,6 +65,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function format          argument */
+    {netspeed_rx, " %s ", "wlan0"},
+    {netspeed_tx, " %s | ", "wlan0"},
     {cpu_perc, "﬙ %s%% | ", NULL},
     {ram_perc, " %s%% | ", NULL},
     {run_command, " %s | ",
@@ -75,7 +77,7 @@ static const struct arg args[] = {
     {disk_free, " %s | ", "/"},
     {disk_free, " %s | ", "/home"},
     {run_command, " %s | ", "uname -r | awk -F \"-\" '{ print $1 }'"},
-    {battery_perc, "󰁿 %s%%", "BAT1"},
-    {battery_state, "%s | ", "BAT1"},
+    {battery_perc, "󰁿 %s%%", "BAT0"},
+    {battery_state, "%s | ", "BAT0"},
     {datetime, "%s", "%F %A %R"},
 };
