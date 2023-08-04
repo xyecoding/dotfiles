@@ -161,4 +161,5 @@ set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # bind -M default cd  '__fzf_cd'
 # bind -M insert \ek 'set fish_bind_mode default'
 # set -gx Z_SCRIPT_PATH ~/z/z.sh
-set -gx EDITOR vi
+set -gx EDITOR "lvim"
+set -gx VISUAL "lvim"
