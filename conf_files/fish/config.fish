@@ -131,6 +131,7 @@ alias wda 'vi ~/myDiary/Dairy/ThingsToDo.md'
 alias wtp 'fish ~/myDiary/create_topic.fish'
 alias unmute 'amixer set Speaker unmute; amixer set Master unmute; amixer set Headphone unmute'
 alias mute 'amixer set Speaker mute; amixer set Master mute; amixer set Headphone mute'
+alias ra 'ranger'
 
 if test (grep microsoft /proc/version)
  # set -x http_proxy socks5://127.0.0.1:10808
