@@ -10,6 +10,8 @@ set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.local/bin/bin $PATH
 set -x PATH ~/.local/bin/bin/statusbar $PATH
 
+set -x _Z_SRC /usr/share/z/z.sh
+
 set -x PATH /usr/local/texlive/2022/bin/x86_64-linux/ $PATH
 alias nusr "~/dotfiles/shell_scripts/create_new_usr.sh"
 fnm env --use-on-cd | source
