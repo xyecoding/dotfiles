@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-yay -S openssh
+yay -S openssh rsync sshpass
 git config --global user.name "xyegithub"
 git config --global user.email "xye@bupt.edu.cn"
 #git config --global url."https://mirror.ghproxy.com/https://github.com".insteadOf https://github.com
