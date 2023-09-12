@@ -36,8 +36,9 @@ function __fzf_run -d "Open files and directories."
         set preview_cmd "--preview-window=right:wrap --preview='fish -c \"__fzf_complete_preview {}\"'"
     end
 
-    set -q FZF_OPEN_COMMAND
-    or set -l FZF_OPEN_COMMAND "
+    # set -q FZF_OPEN_COMMAND
+    # or set -l FZF_OPEN_COMMAND "
+    set -l FZF_OPEN_COMMAND "
     command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
     -o -type f -print \
     -o -type d -print \
@@ -107,8 +108,9 @@ function __fzf_open -d "Open files and directories."
         set preview_cmd "--preview-window=right:wrap --preview='fish -c \"__fzf_complete_preview {}\"'"
     end
 
-    set -q FZF_OPEN_COMMAND
-    or set -l FZF_OPEN_COMMAND "
+    # set -q FZF_OPEN_COMMAND
+    # or set -l FZF_OPEN_COMMAND "
+    set -l FZF_OPEN_COMMAND "
     command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
     -o -type f -print \
     -o -type d -print \
@@ -145,3 +147,4 @@ bind -M insert \co '__fzf_open'
 bind -M insert \cp '__fzf_run'
 set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # set -U FZF_OPEN_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
+# set -U FZF_OPEN_COMMAND ""
