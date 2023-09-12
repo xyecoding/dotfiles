@@ -145,6 +145,8 @@ end
 
 bind -M insert \co '__fzf_open'
 bind -M insert \cp '__fzf_run'
+bind -M insert \ci '__fzf_cd --hidden'
+bind -M insert \cu '__fzf_reverse_isearch'
 set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # set -U FZF_OPEN_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # set -U FZF_OPEN_COMMAND ""
