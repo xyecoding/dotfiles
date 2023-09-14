@@ -65,19 +65,31 @@ function __fzf_run -d "Open files and directories."
           eval "$open_cmd -l $select"
           set_color red; echo "Chose one program to open the file: "
           set_color red; echo "[default=2]:"
-          function ctrl_c_handler --on-event INT
-              set -g ctrol_c_fzf break
-          end
-          trap 'ctrl_c_handler' INT
-          read -l -P "" number
-          if test -z "$ctrol_c_fzf"
+          # function ctrl_c_handler --on-event INT
+          #     set -g ctrol_c_fzf break
+          # end
+          # trap 'ctrl_c_handler' INT
+          # read -l -P "" number
+          # if test -z "$ctrol_c_fzf"
+          #       if test -z "$number"
+          #           set number 2
+          #       end
+          #       eval "$open_cmd -p $number $select"
+          # end
+          # if read -l -P "" number
+          #      if test -z "$number"
+          #          set number 2
+          #      end
+          #      eval "$open_cmd -p $number $select"
+          # end
+          if read -l -P "" number or exit
                 if test -z "$number"
                     set number 2
                 end
                 eval "$open_cmd -p $number $select"
           end
         end
-        set -e ctrol_c_fzf
+        # set -e ctrol_c_fzf
         set open_status $status
     end
 
