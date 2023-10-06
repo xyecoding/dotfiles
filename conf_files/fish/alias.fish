@@ -111,4 +111,4 @@ alias mute 'amixer set Speaker mute; amixer set Master mute; amixer set Headphon
 alias ra 'ranger'
 alias bk '~/dotfiles/shell_scripts/backup_files.fish'
 alias gp 'grep -n -H -R'
-alias cpath 'pwd | xsel -i -b'
+alias cpth 'pwd | xsel -i -b'
