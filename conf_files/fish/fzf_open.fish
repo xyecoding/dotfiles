@@ -173,3 +173,8 @@ bind -M insert \cu '__fzf_cd --hidden'
 set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # set -U FZF_OPEN_COMMAND "ag -l --hidden --ignore .git . \$dir 2> /dev/null"
 # set -U FZF_OPEN_COMMAND ""
+set -U FZF_FIND_FILE_COMMAND "
+    command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
+    -o -type f -print \
+    -o -type d -print \
+    -o -type l -print 2> /dev/null | sed 's@^\./@@'"
