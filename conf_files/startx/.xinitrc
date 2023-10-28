@@ -55,6 +55,7 @@ xrandr --auto
 # xrandr --output HDMI-1-1 --auto --right-of eDP-1-1
 goldendict &
 slstatus &
+netease-cloud-music-gtk4 &
 #/usr/bin/prime-offload &
 pulseaudio --start &
 exec dwm 
