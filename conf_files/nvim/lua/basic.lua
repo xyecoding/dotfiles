@@ -6,6 +6,11 @@ lvim.format_on_save = true
 -- filetype plugin on
 -- filetype indent on
 -- ]]
+lvim.builtin.telescope.on_config_done = function(telescope)
+  -- pcall(telescope.load_extension, "frecency")
+  pcall(telescope.load_extension, "neoclip")
+  -- any other extensions loading
+end
 lvim.builtin.which_key.setup.plugins.registers = true
 lvim.builtin.which_key.setup.plugins.marks = true
 lvim.builtin.which_key.setup.plugins.presets.operators = true
