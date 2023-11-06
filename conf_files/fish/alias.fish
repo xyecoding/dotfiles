@@ -8,13 +8,14 @@ alias rm trash-put
 alias em "emacs -nw"
 # shopt -s direxpand
 alias ctp 'cd ~/temp_try'
-alias cdh 'cd ~/dotfiles'
-alias cdd 'cd ~/Downloads'
-alias cvh 'cd ~/.local/share/lunarvim/lvim/'
-alias cbg 'cd ~/myBlog'
-alias cda 'cd ~/myDiary'
+alias cdf 'cd ~/dotfiles'
+alias cdl 'cd ~/Downloads'
+alias cpp 'cd ~/paper_pdfs'
+alias clv 'cd ~/.local/share/lunarvim/lvim/'
+alias cmb 'cd ~/myBlog'
+alias cmd 'cd ~/myDiary'
 alias gd   'goldendict'
-alias cpp 'cd ~/mypaper'
+alias cmp 'cd ~/mypaper'
 
 function dict_keys -d "Print keys from a key/value paired list"
     for idx in (seq 1 2 (count $argv))
