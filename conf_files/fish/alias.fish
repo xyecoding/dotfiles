@@ -5,6 +5,9 @@ alias tobupt ~/dotfiles/conf_files/openssh/connect_bupt.sh
 alias mlt "sudo ~/dotfiles/shell_scripts/change_light_arch.sh"
 alias v lvim
 alias rm trash-put
+alias "rm\ -rf" trash-put
+alias "rm\ -r" trash-put
+alias "rm\ -f" trash-put
 alias em "emacs -nw"
 # shopt -s direxpand
 alias ctp 'cd ~/temp_try'
