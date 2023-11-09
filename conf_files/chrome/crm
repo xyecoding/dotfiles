@@ -1,1 +1,1 @@
-chromium --incognito
+chromium --incognito --new-window https://github.com/LiLittleCat/awesome-free-chatgpt
