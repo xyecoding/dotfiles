@@ -1,5 +1,5 @@
 #!/bin/bash
-chromium -incognito &
+crm &
 st &
 birdtray &
 vmware &
