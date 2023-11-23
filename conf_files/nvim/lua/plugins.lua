@@ -18,6 +18,14 @@ lvim.plugins = {
   --   "nvim-treesitter/nvim-treesitter-textobjects",
   -- },
   {
+    "cbochs/portal.nvim",
+    -- Optional dependencies
+    dependencies = {
+      "cbochs/grapple.nvim",
+      "ThePrimeagen/harpoon"
+    },
+  },
+  {
     "AckslD/nvim-neoclip.lua",
     dependencies = {
       { 'kkharji/sqlite.lua',           module = 'sqlite' },

@@ -5,6 +5,8 @@ lvim.keys.insert_mode["jj"] = false
 lvim.keys.insert_mode["jk"] = false
 lvim.keys.insert_mode["kj"] = false
 lvim.keys.normal_mode["<c-p>"] = ":lua require('neoclip.fzf')()<cr>"
+vim.keymap.set("n", "<c-o>", "<cmd>Portal jumplist backward<cr>")
+vim.keymap.set("n", "<c-i>", "<cmd>Portal jumplist forward<cr>")
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<c-up>"] = false
 -- edit a default keymapping
