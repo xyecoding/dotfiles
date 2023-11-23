@@ -4,6 +4,7 @@ lvim.keys.normal_mode["0"] = "^"
 lvim.keys.insert_mode["jj"] = false
 lvim.keys.insert_mode["jk"] = false
 lvim.keys.insert_mode["kj"] = false
+lvim.keys.normal_mode["<c-p>"] = ":lua require('neoclip.fzf')()<cr>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<c-up>"] = false
 -- edit a default keymapping
