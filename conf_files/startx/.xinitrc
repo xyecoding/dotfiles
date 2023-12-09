@@ -52,7 +52,7 @@ xset dpms 0 0 0
 fcitx5 &
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
-# xrandr --output HDMI-1-1 --auto --right-of eDP-1-1
+xrandr --output HDMI-1-1 --auto --right-of eDP-1-1
 goldendict &
 slstatus &
 netease-cloud-music-gtk4 &
