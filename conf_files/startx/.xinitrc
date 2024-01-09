@@ -57,6 +57,8 @@ goldendict &
 slstatus &
 netease-cloud-music-gtk4 &
 #/usr/bin/prime-offload &
+
 pulseaudio --start &
+x0vncserver -rfbauth ~/.vnc/passwd &
 exec dwm 
 #xterm -geometry 80x66+0+0 -name login
