@@ -60,5 +60,6 @@ netease-cloud-music-gtk4 &
 
 pulseaudio --start &
 x0vncserver  -rfbauth ~/.vnc/passwd  -localhost -SecurityTypes none &
+~/frp/frpc -c ~/frp/frpc.toml &
 exec dwm 
 #xterm -geometry 80x66+0+0 -name login
