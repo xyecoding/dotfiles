@@ -53,13 +53,13 @@ fcitx5 &
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --output HDMI-1-1 --auto --right-of eDP-1-1
+pulseaudio --start &
+
 goldendict &
 slstatus &
 netease-cloud-music-gtk4 &
 #/usr/bin/prime-offload &
 
-pulseaudio --start &
-x0vncserver  -rfbauth ~/.vnc/passwd  -SecurityTypes VncAuth &
-~/frp/frpc -c ~/frp/frpc.toml &
+
 exec dwm 
 #xterm -geometry 80x66+0+0 -name login
