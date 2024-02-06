@@ -31,4 +31,4 @@ else
 end
 set -gx EDITOR "lvim"
 set -gx VISUAL "lvim"
-bind --mode visual --sets-mode default Y 'fish_clipboard_copy; commandline -f repaint'
+bind --mode visual --sets-mode default Y 'fish_clipboard_copy; commandline -f repaint-mode; commandline -f end-selection'
