@@ -31,3 +31,4 @@ else
 end
 set -gx EDITOR "lvim"
 set -gx VISUAL "lvim"
+bind -M visual \cc fish_clipboard_copy

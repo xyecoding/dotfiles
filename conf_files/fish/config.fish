@@ -6,3 +6,4 @@ end
 source ~/dotfiles/conf_files/fish/fzf_open.fish
 source ~/dotfiles/conf_files/fish/alias.fish
 source ~/dotfiles/conf_files/fish/env.fish
+
