@@ -8,7 +8,7 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 -- vim.opt.shell = "/bin/sh"
-vim.opt.rtp:append("~/.config/lvim/mylvim")
+vim.opt.rtp:append("/home/Eric/.config/lvim/mylvim")
 require('plugins')
 require("null_ls")
 require("debug")
@@ -17,4 +17,4 @@ require("basic")
 require("conf_plugins")
 require("autocommand")
 require("keymap")
-vim.opt.rtp:append("~/.config/lvim/mylvim/after")
+vim.opt.rtp:append("/home/Eric/.config/lvim/mylvim/after")
