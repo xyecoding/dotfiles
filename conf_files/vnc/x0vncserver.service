@@ -1,0 +1,13 @@
+[Unit]
+Description=Remote desktop service (VNC)
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStartPre=/bin/sh -c 'while ! pgrep -U "$USER" Xorg; do sleep 2; done'
+ExecStart=x0vncserver -rfbauth /home/Eric/.vnc/passwd  -SecurityTypes VncAuth
+
+[Install]
+WantedBy=default.target

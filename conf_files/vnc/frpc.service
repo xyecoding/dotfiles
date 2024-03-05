@@ -1,0 +1,13 @@
+[Unit]
+Description=Frp Client Service
+Wants = network.target
+After = network.target syslog.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=/home/Eric/frp/frpc -c /home/Eric/frp/frpc.toml
+
+[Install]
+WantedBy=default.target
