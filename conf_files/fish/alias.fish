@@ -45,7 +45,7 @@ function dict_get -a key -d "Get the value associated with a key in a k/v paired
     return 1
 end
 function ssh_connect
-  sshpass -p $argv[1] ssh -p $argv[2] $argv[3]@$argv[4] -o StrictHostKeyChecking=no
+  sshpass -p $argv[1] ssh -X -p $argv[2] $argv[3]@$argv[4] -o StrictHostKeyChecking=no
 end 
 
 set -l host_inf \
