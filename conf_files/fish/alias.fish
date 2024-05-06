@@ -53,7 +53,7 @@ set -l host_inf \
   host2 "10.112.119.117 666" \
   host3 "10.112.218.126 666" \
   host3090 "10.112.75.66 22"\
-  Server "192.168.10.231 22"\
+  Server "192.168.10.229 22"\
 
 
 # the key must be host name + "_" + user name
