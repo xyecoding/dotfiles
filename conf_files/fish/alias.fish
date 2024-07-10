@@ -16,7 +16,7 @@ alias cdl 'cd ~/Downloads'
 alias cpp 'cd ~/paper_pdfs'
 alias clv 'cd ~/.local/share/lunarvim/lvim/'
 alias cmb 'cd ~/myBlog'
-alias cmd 'cd ~/myDiary'
+alias cda 'cd ~/myDiary'
 alias gd   'goldendict'
 alias cmp 'cd ~/mypaper'
 
