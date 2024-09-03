@@ -8,6 +8,7 @@ set -x PATH ~/.fnm $PATH
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.local/bin/bin $PATH
 set -x PATH ~/.local/bin/bin/statusbar $PATH
+set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 set -x _Z_SRC /usr/share/z/z.sh
 set -x PATH /usr/local/texlive/2022/bin/x86_64-linux/ $PATH
 set -U fish_cursor_insert line
