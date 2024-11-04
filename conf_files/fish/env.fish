@@ -5,6 +5,7 @@ set -x  LC_ALL "en_US.UTF-8"
 # set -x WINEARCH "win32"
 set -x PATH ~/.cargo/bin $PATH
 set -x PATH ~/.fnm $PATH
+set -x PATH "/opt/miniconda3/bin" $PATH
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.local/bin/bin $PATH
 set -x PATH ~/.local/bin/bin/statusbar $PATH
